@@ -1,0 +1,196 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+p,
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+html {
+    background-color: rgba(2, 2, 2, 0.192);
+    scroll-behavior: smooth;
+}
+
+
+/*----------------ENCABEZADO--------------------*/
+
+header {
+    position: relative;
+}
+
+body>header h1 {
+    text-align: center;
+    color: #FFF;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.franja {
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header>nav {}
+
+header>nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header>nav ul li {
+    display: flex;
+    flex-grow: 1;
+}
+
+.encabezado {
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-grow: 1;
+    /*Posiciona la img*/
+    background-position-x: center;
+    background-position-y: center;
+    /*para aplicar opacidad*/
+    background-color: rgba(0, 0, 0, 0.5);
+    /*pone como prioridad el color antes que la imagen*/
+    background-blend-mode: darken;
+    justify-content: center;
+    align-items: center;
+}
+
+header>nav ul li>a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.encabezado.sobremi {
+    background-image: url(/img/sobremi.jpg);
+}
+
+.encabezado.proyectos {
+    background-image: url(/img/proyectos.jpg);
+}
+
+.encabezado.contacto {
+    background-image: url(/img/contacto.jpg);
+}
+
+
+/*----------------SECCIONES--------------------*/
+
+section {
+    display: flex;
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------------- SECCION SOBRE MI ---------------*/
+
+section.seccionSobremi {
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+section.seccionSobremi>img {
+    width: 175px;
+    height: 200px;
+    background-position-x: center;
+    background-position-y: 10px;
+    Border-radius: 100%;
+}
+
+
+/*-------------- SECCION PROYECTO ---------------*/
+
+section.seccionProyectos {
+    text-align: justify;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    height: 100vh;
+    padding: 0px;
+}
+
+section.seccionProyectos>div {
+    flex-direction: row;
+    width: 45%;
+}
+
+section.seccionProyectos h2,
+section.seccionProyectos a {
+    padding-left: 10px;
+}
+
+
+/*-------------- SECCION CONTACTO ---------------*/
+
+section.seccionContacto {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section ul li a {
+    background-size: cover;
+    display: flex;
+    text-decoration: none;
+    margin: 0px 25px;
+}
+
+.icono {
+    height: 60px;
+    width: 60px;
+}
+
+.linkedin {
+    background-image: url(img/linkedin.png);
+}
+
+.github {
+    Border-radius: 30px;
+    background-image: url(img/github.png);
+}
+
+.email {
+    Border-radius: 30px;
+    background-image: url(img/email.png);
+}
+
+section p {
+    padding: 10px
+}
+
+
+/*----------btn subir-----------*/
+
+.btnSubir {
+    background-image: url(img/flecha.png);
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+}
