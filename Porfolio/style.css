@@ -39,8 +39,6 @@ body>header h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-header>nav {}
-
 header>nav ul {
     list-style-type: none;
     display: flex;
@@ -68,12 +66,17 @@ header>nav ul li {
     background-blend-mode: darken;
     justify-content: center;
     align-items: center;
+    transition-duration: 0.4s;
 }
 
 header>nav ul li>a {
     text-decoration: none;
     color: #FFF;
     font-family: 'Roboto Mono', monospace;
+}
+
+header>nav ul li>a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .encabezado.sobremi {
@@ -104,7 +107,7 @@ section {
 section.seccionSobremi {
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    padding: 50px 50px;
 }
 
 section.seccionSobremi>img {
@@ -113,6 +116,11 @@ section.seccionSobremi>img {
     background-position-x: center;
     background-position-y: 10px;
     Border-radius: 100%;
+    box-shadow: 16px 1px 17px 0 rgba(3, 3, 3, 0.432), 5px 1px 12px 0px rgba(0, 0, 0, 0.568);
+}
+
+section.seccionSobremi>h2 {
+    visibility: hidden;
 }
 
 
@@ -123,13 +131,13 @@ section.seccionProyectos {
     background-color: black;
     color: rgba(255, 255, 255, 0.836);
     display: flex;
-    height: 100vh;
-    padding: 0px;
+    padding: 50px 50px;
 }
 
 section.seccionProyectos>div {
     flex-direction: row;
     width: 45%;
+    height: 65%;
 }
 
 section.seccionProyectos h2,
@@ -161,12 +169,15 @@ section ul li a {
 }
 
 .icono {
+    transform: translateY(4px);
+    transition-duration: 0.4s;
     height: 60px;
     width: 60px;
 }
 
 .linkedin {
     background-image: url(img/linkedin.png);
+    border-radius: 30px;
 }
 
 .github {
@@ -184,7 +195,7 @@ section p {
 }
 
 
-/*----------btn subir-----------*/
+/*----------btn subir y movimiento de redes-----------*/
 
 .btnSubir {
     background-image: url(img/flecha.png);
@@ -193,4 +204,19 @@ section p {
     z-index: 1;
     bottom: 10px;
     right: 10px;
+}
+
+a.icono:hover {
+    transform: scale(1.2);
+}
+
+
+/*-----mediaqry------*/
+
+@media only screen and (min-width: 740px) and (min-height: 450px) {
+    section.seccionProyectos,
+    section.seccionSobremi {
+        height: 100vh;
+        padding: 0px 20px;
+    }
 }
