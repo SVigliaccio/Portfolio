@@ -77,15 +77,15 @@ header>nav ul li>a {
 }
 
 .encabezado.sobremi {
-    background-image: url(/img/sobremi.jpg);
+    background-image: url(img/sobremi.png);
 }
 
 .encabezado.proyectos {
-    background-image: url(/img/proyectos.jpg);
+    background-image: url(img/proyectos.png);
 }
 
 .encabezado.contacto {
-    background-image: url(/img/contacto.jpg);
+    background-image: url(img/contacto.png);
 }
 
 
